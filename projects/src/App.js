@@ -163,21 +163,22 @@ function App() {
     <div
       className="App"
       id="main"
-      style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}
+      style={{ width: "100%", marginLeft: "auto", marginRight: "auto" }}
     >
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={{
           content: {
-            top: "10%",
-            left: "10%",
-            right: "10%",
+            top: "5%",
+            left: "5%",
+            right: "5%",
             bottom: "auto",
           },
         }}
       >
         <div class="App">
+          <div style={{display: "flex", alignItems:"flex-end", justifyContent: "flex-end"}}> <button style={{cursor:"pointer",  backgroundColor: "white", border: "none", fontSize: 20, fontWeight: 500}} onClick={closeModal}>⨉</button></div>
           <h1>{project.title}</h1>
           <div style={{ fontSize: 14 }}>
             {project.tags.map((t) => (
@@ -191,6 +192,7 @@ function App() {
             ))}
           </div>
           <ReactMarkdown children={`${project.abstract}`} />
+          <h3>Other information</h3>
           <div style={{ backgroundColor: "#FAFAFA", padding: 20 }}>
             <div>
               Expected background:{" "}
