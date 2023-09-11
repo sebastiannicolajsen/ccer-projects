@@ -7,4 +7,4 @@ This repository stores and publishes project suggestions for our website. A proj
 - Tags helping describing the project, e.g., `MSc thesis`, `Debugging`, `Praxeology`.
 - The suggested educational background student should have, e.g., a particular programme if any.
 - expected competencies (what should the student be capable of doing)
-- A brief sentence on the competencies which the students will obtian.
+- A brief sentence on the competencies which the students will obtain.
