@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ccer-projects/static/css/main.a70a3816.css",
+    "main.js": "/ccer-projects/static/js/main.b2d3b653.js",
+    "index.html": "/ccer-projects/index.html",
+    "main.a70a3816.css.map": "/ccer-projects/static/css/main.a70a3816.css.map",
+    "main.b2d3b653.js.map": "/ccer-projects/static/js/main.b2d3b653.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a70a3816.css",
+    "static/js/main.b2d3b653.js"
+  ]
+}
