@@ -5,6 +5,34 @@
             "name": "name"
         },
         {
+            "email": "brabrand@itu.dk",
+            "name": "Claus Brabrand"
+        },
+        {
+            "email": "loca@itu.dk",
+            "name": "Louise Meier Carlsen"
+        },
+        {
+            "email": "pawg@itu.dk",
+            "name": "Pawel Grabarczyk"
+        },
+        {
+            "email": "nans@itu.dk",
+            "name": "Nanna Inie"
+        },
+        {
+            "email": "gipo@itu.dk",
+            "name": "Giacomo Poderi"
+        },
+        {
+            "email": "jepo@itu.dk",
+            "name": "Jelena Popov"
+        },
+        {
+            "email": "soni@itu.dk",
+            "name": "Sofie Nielsen"
+        },
+        {
             "email": "sebni@itu.dk",
             "name": "Sebastian Mateos Nicolajsen"
         }
