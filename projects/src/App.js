@@ -82,7 +82,6 @@ const Pill = ({ text, color }) => (
       color: tinycolor(color).isDark() ? "white" : "black",
     }}
   >
-    {" "}
     {text}
   </span>
 );
