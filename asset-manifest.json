@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ccer-projects/static/css/main.a90aed5a.css",
-    "main.js": "/ccer-projects/static/js/main.9c1245c7.js",
+    "main.js": "/ccer-projects/static/js/main.be2d92a5.js",
     "index.html": "/ccer-projects/index.html",
     "main.a90aed5a.css.map": "/ccer-projects/static/css/main.a90aed5a.css.map",
-    "main.9c1245c7.js.map": "/ccer-projects/static/js/main.9c1245c7.js.map"
+    "main.be2d92a5.js.map": "/ccer-projects/static/js/main.be2d92a5.js.map"
   },
   "entrypoints": [
     "static/css/main.a90aed5a.css",
-    "static/js/main.9c1245c7.js"
+    "static/js/main.be2d92a5.js"
   ]
 }
