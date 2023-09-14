@@ -1,78 +1,245 @@
 {
-    "people": [
-        {
-            "email": "email",
-            "name": "name"
-        },
-        {
-            "email": "brabrand@itu.dk",
-            "name": "Claus Brabrand"
-        },
-        {
-            "email": "loca@itu.dk",
-            "name": "Louise Meier Carlsen"
-        },
-        {
-            "email": "pawg@itu.dk",
-            "name": "Pawel Grabarczyk"
-        },
-        {
-            "email": "nans@itu.dk",
-            "name": "Nanna Inie"
-        },
-        {
-            "email": "gipo@itu.dk",
-            "name": "Giacomo Poderi"
-        },
-        {
-            "email": "jepo@itu.dk",
-            "name": "Jelena Popov"
-        },
-        {
-            "email": "soni@itu.dk",
-            "name": "Sofie Nielsen"
-        },
-        {
-            "email": "sebni@itu.dk",
-            "name": "Sebastian Mateos Nicolajsen"
-        }
-    ],
+  "people": [
+    {
+      "email": "email",
+      "name": "name"
+    },
+    {
+      "email": "brabrand@itu.dk",
+      "name": "Claus Brabrand"
+    },
+    {
+      "email": "loca@itu.dk",
+      "name": "Louise Meier Carlsen"
+    },
+    {
+      "email": "pawg@itu.dk",
+      "name": "Pawel Grabarczyk"
+    },
+    {
+      "email": "nans@itu.dk",
+      "name": "Nanna Inie"
+    },
+    {
+      "email": "gipo@itu.dk",
+      "name": "Giacomo Poderi"
+    },
+    {
+      "email": "jepo@itu.dk",
+      "name": "Jelena Popov"
+    },
+    {
+      "email": "soni@itu.dk",
+      "name": "Sofie Nielsen"
+    },
+    {
+      "email": "sebni@itu.dk",
+      "name": "Sebastian Mateos Nicolajsen"
+    },
+    {
+      "email": "sestoft@itu.dk",
+      "name": "Peter Sestoft",
+      "external": true
+    },
+    {
+      "email": "chse@itu.dk",
+      "name": "Christoph Seidl",
+      "external": true
+    },
+    {
+      "email": "brun@itu.dk",
+      "name": "Alessandro Bruni",
+      "external": true
+    }
+  ],
 
-    "tags": [
-        {
-            "name": "name",
-            "color": "#FAFAFA"
-        },
-        {
-            "name": "debugging",
-            "color": "#F2F2F2"
-        },
-        {
-            "name": "learning",
-            "color": "blue"
-        },
-        {
-            "name": "MSc thesis",
-            "color": "red"
-        },
-        {
-            "name": "BSc thesis",
-            "color": "green"
-        }
-    ],
+  "default_colors": [
+    "#B75D69",
+    "#444B6E",
+    "#98CBB4",
+    "#EACDC2",
+    "#BDADEA",
+    "#FFEAD0",
+    "#C6ECAE",
+    "#575A4B",
+    "#D5D6AA",
+    "#2B4141",
+    "#4C4C9D",
+    "#FFBF81",
+    "#F4F4ED",
+    "#233d4d",
+    "#fe7f2d",
+    "#fcca46",
+    "#a1c181",
+    "#619b8a",
+    "#d88c9a",
+    "#f2d0a9",
+    "#f1e3d3",
+    "#99c1b9",
+    "#8e7dbe",
+    "#e2711d",
+    "#8c2f39"
+  ],
 
-    "projects": [
-        {
-            "title": "Project title",
-            "responsibles": [
-                "sebni@itu.dk"
-            ],
-            "abstract": "Curabitur leo mi, sollicitudin at blandit quis, luctus eget urna. Sed eu sem egestas, tempor magna mattis, posuere justo. Sed id lectus vitae nisi ullamcorper aliquam sit amet vitae mauris. In hac habitasse platea dictumst. Nam eu enim non lectus consequat convallis. Aliquam ac rhoncus nibh, in scelerisque felis. Nam cursus enim in magna venenatis efficitur. Ut vel velit at ligula bibendum rutrum. Nunc sagittis egestas odio, id lobortis diam tempus vitae. Etiam arcu tellus, efficitur eget orci sed, pulvinar pharetra nulla. Aenean tempus ultrices orci, ut dictum lectus ultricies ut. Pellentesque pulvinar cursus dolor eget tincidunt. Sed ut arcu mattis, ullamcorper ante vel, porttitor ante. Morbi auctor lorem id ultrices euismod. Curabitur non libero a libero porta pellentesque. Vestibulum pellentesque enim et nisl elementum, non posuere felis ultrices. Aenean in magna a lectus aliquet eleifend. In interdum luctus tortor nec cursus. Vivamus volutpat turpis at lectus consectetur aliquet. Maecenas ultrices tincidunt mattis. Vestibulum venenatis pharetra nisl vitae pellentesque. Curabitur suscipit cursus turpis ac fringilla. Morbi finibus auctor ipsum, a scelerisque libero semper sed. Phasellus lacinia commodo quam eu tincidunt. Phasellus vehicula ac velit et gravida. Morbi ornare turpis at turpis blandit facilisis. Ut quis nisi suscipit, tempus dolor sit amet, consequat tortor. Etiam aliquam augue erat, eget maximus mi blandit eu. Nunc viverra sem eu purus tincidunt egestas. Aliquam suscipit auctor mi, id malesuada ante facilisis vel. Suspendisse quis eros libero. Donec at aliquam ex. Mauris feugiat, neque sed gravida faucibus, erat nibh rutrum risus, quis mattis purus erat at lacus. Vestibulum eu tempus diam. Aenean venenatis felis vitae ante laoreet mattis. Aenean dapibus nibh metus, suscipit dapibus purus iaculis non. Ut eget vulputate dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed et tincidunt eros. Cras massa purus, \n ## Inline title \n tempor et est eget, egestas vehicula odio. Praesent eget efficitur sapien. Sed sit amet velit eget nisi sollicitudin sodales. In non libero nec mauris hendrerit pretium ut in sem.",
-            "education_background": "Software design, Software Development",
-            "expected_competencies": "Pre-defined competencies",
-            "outcome": "What will the student be learning and working with",
-            "tags": ["debugging", "learning", "MSc thesis", "BSc thesis"]
+  "tags": [
+    {
+      "name": "name",
+      "color": "#FAFAFA"
+    },
+    {
+      "name": "MSc thesis",
+      "color": ".0"
+    },
+    {
+      "name": "BSc thesis",
+      "color": ".1"
+    },
+    {
+      "name": "Research project",
+      "color": ".2"
+    },
+    {
+      "name": "completed",
+      "color": "black"
+    },
+    {
+      "name": "Interaction design",
+      "color": ".3"
+    },
+    {
+      "name": "text-to-speech",
+      "color": ".4"
+    },
+    {
+      "name": "Software development",
+      "color": ".5"
+    },
+    {
+      "name": "Online learning",
+      "color": ".6"
+    },
+    {
+      "name": "Programming learning",
+      "color": ".7"
+    },
+    {
+      "name": "Cyber security education",
+      "color": ".15"
+    },
+    {
+      "name": "Learning",
+      "color": ".9"
+    },
+    {
+      "name": "Capture the flag",
+      "color": ".10"
+    },
+    {
+      "name": "Self-efficacy",
+      "color": ".11"
+    },
+    {
+      "name": "Computational thinking",
+      "color": ".12"
+    },
+    {
+      "name": "Published",
+      "color": ".13"
+    },
+    {
+        "name": "Automatic assessment",
+        "color": ".14"
+    }
+  ],
 
-        }
-    ]
+  "projects": [
+    {
+      "title": "PaperPlayer",
+      "responsibles": ["nans@itu.dk"],
+      "abstract": "**How might we enhance the consumption of scientific texts with audio?** Using automatic text-to-speech, language recognition of the sections of a paper, and good interaction design, could we build a system which lets students and researchers add academic papers in pdf-format to a repository, and listen to them as automatically read audio files?",
+      "tags": [
+        "Interaction design",
+        "text-to-speech",
+        "Software development",
+        "BSc thesis",
+        "MSc thesis"
+      ],
+      "education_background": "Software Design, Software Development",
+      "expected_competencies": "Some knowledge of Figma if you would like to do design, front-end programming with React or Svelte if you would like to do development.",
+      "outcome": "The ultimate goal is an open platform where researchers can upload and convert their papers into audio files and students and other researchers can listen to the files and automatically add `points of interest' in the audio file, which will be converted into highlights in the digital pdf. "
+    },
+    {
+      "title": "Human.code Coding Tutorial",
+      "responsibles": ["nans@itu.dk"],
+      "abstract": "Human.code is a prototype project aimed at **teaching people with no coding experience Python and computational thinking through an online interface with customizable pathways**. This means that rather than going through a rigid, step-by-step curriculum, the learner will decide how to approach the learning material.",
+      "tags": [
+        "Interaction design",
+        "programming learning",
+        "Software development",
+        "Online learning",
+        "BSc thesis",
+        "MSc thesis"
+      ],
+      "education_background": "Software Design, Interaction Design",
+      "expected_competencies": "You are comfortable working in Figma if you would like to contribute to the design part. You have some experience with coding a web-based application frontend/backend. Svelte experience is preferred, but if you are willing to learn, React/JavaScript experience is also ok. You will be collaborating with one or more students from University of Washington, who have been working on this project during 2023.",
+      "outcome": "The first goal is a minimum viable prototype to test the hypothesis that we can build a freely customizable learning environment. As of fall 2023, we have a minimal infrastructure of backend/frontend sync in place, but we need a lot of improvement, development, and design."
+    },
+    {
+      "title": "Capture the flag-style course activities from the novice perspective",
+      "responsibles": ["loca@itu.dk", "brun@itu.dk"],
+      "abstract": "A range of universities are utilizing elements from the popular Capture the Flag competitions (CTFs) to teach practical cyber security. However, few studies have systematically investigated the suitability,  impact, and value of CTF-style activities in the context of tertiary education. Moreover, little research  has been done on the subjective experiences of cyber security novices exposed to this type of exercises. This thesis aims to address this gap, adopting a qualitative methodology to examine CTF-style course  activities from the novice perspective. My findings suggest that the exercises may have adverse effects  on novice self-efficacy, placing students at a disadvantage when approaching similar tasks in the future.  Furthermore, I argue that the gamification elements and vague challenge prompts inherent to the CTF  setup may promote extrinsic goal orientation and surface learning, diverting student attention from the  learning process. Finally, I propose that the current design of the exercises is likely to favor students  skilled at adapting and reflecting on their own learning. I conclude the thesis arguing that, if well prepared,  CTF-style exercises are in a unique position to teach skills highly relevant for future cyber  security professionals. As such, findings of this thesis may serve to inform and guide the design of future CTF-style educational activities.",
+      "education_background": "Software design, Technical Interaction Design",
+      "expected_competencies": "Experience with qualitative methods, knowledge of educational psychology, knowledge of basic cyber security",
+      "outcome": "Through the project you will gain experience with planning and executing a qualitative study and analysing qualitative data. Furthermore, you will deepen your knowledge of cyber security and educational psychology. Finally, you will get an insight into computer education research practices and themes",
+      "tags": [
+        "MSc thesis",
+        "Cyber security education",
+        "Learning",
+        "Capture the flag",
+        "Self-efficacy"
+      ],
+      "completed": true
+    },
+    {
+      "title": "Three +1 Perspectives on Computational Thinking",
+      "responsibles": ["brabrand@itu.dk", "pawg@itu.dk"],
+      "abstract": "Computational Thinking (CT) is a highly contentious subject with many diverging meanings and definitions. This study presents a preliminary literature review of 71 peer-reviewed articles on CT. The papers indicate the existence of five main aspects that have historically been used in association with its definition: Algorithm, Abstraction, Modelling, Simulation, and Implementation. Based on this preliminary literature study, semi-structured interviews with eight CT scholars are conducted, in order to evaluate these aspects and to identify qualitatively different perspectives on CT, which integrate the mentioned aspects in different ways. From the interviews, three different perspectives emerged, focusing on: Reasoning, Simplification, and Automation. Furthermore, the goal of having computationally educated citizens is extrapolated from the interviews, indicating an additional perspective (+1) titled Empowerment, which appears as embedded within all the previous three perspectives. This paper proposes to put these three (+1) perspectives in dialogue, in an effort to support researchers and practitioners working with CT across different fields",
+      "education_background": "Software development",
+      "expected_competencies": "Interest in computing and its integration in society",
+      "outcome": "Experiences with qualitative methods such as literature reviews and interviews. The project was published",
+      "tags": ["BSc thesis", "Computational thinking", "Published"],
+      "completed": true
+    },
+    {
+      "title": "Understanding Programming Languages as a Novice",
+      "responsibles": ["sestoft@itu.dk", "chse@itu.dk"],
+      "abstract": "If educators want to teach programming and continuously improve their teaching, they must know how learners struggle with programming languages. While research explores novices’ understanding of programming language constructs in isolation, programming is the ability to combine language features to produce programs. In learning to do so, novices must also learn to read programs. Currently, there is no exploration of which misconceptions arise when novices attempt to comprehend coherent programs and apply programming language constructs in combination. In this thesis, I construct and conduct a think aloud experiment using a mixed-methods approach to explore how novices perceive an entire program and to detail misunderstandings of programming languages. I collect and analyse 30 data points by (i) investigating the completeness of each solution, (ii) categorising the notations applied, and (iii) categorising the complexity of the thoughts expressed regarding the program. By triangulating the analyses, I detail which misconceptions arise when novices attempt to comprehend a coherent program and produce four recommendations to aid educators in teaching programming. By exploring which misconceptions arise in novices’ understanding of combined program constructs, I take the first step towards informing educators of learners’ misconceptions of coherent programs and produce actionable recommendations to foster viable understandings.",
+      "education_background": "Computer science",
+      "expected_competencies": "Experience with qualitative methods, e.g., think-aloud interviews and programming languages and typical novice obstacles.",
+      "outcome": "An understanding of mental models in the context of computer science and programming learning.",
+      "tags": [
+        "MSc thesis",
+        "Programming learning",
+        "Self-efficacy",
+        "Learning"
+      ],
+      "completed": true
+    },
+    {
+      "title": "Feedback on Student Programming Assignments: Teaching Assistants vs Automated Assessment Tool",
+      "responsibles": ["brabrand@itu.dk", "sebni@itu.dk"],
+      "abstract": "Existing research does not quantify and compare the differences between automated and manual assessment in the context of feedback on programming assignments. This makes it hard to reason about the effects of adopting automated assessment at the expense of manual assessment. Based on a controlled experiment involving N=117 first-semester CS1 students, we compare the effects of having access to feedback from: i) only automated assessment, ii) only manual assessment (in the form of teaching assistants), and iii) both automated as well as manual assessment. The three conditions are compared in terms of (objective) task effectiveness and from a (subjective) student perspective. The experiment demonstrates that having access to both forms of assessment (automated and manual) is superior both from a task effectiveness as well as a student perspective. We also find that the two forms of assessment are complementary: automated assessment appears to be better in terms of task effectiveness; whereas manual assessment appears to be better from a student perspective. We then perform a cost/benefit analysis which leads to the identification of four equilibria that appropriately balance costs and benefits. Finally, this gives rise to four recommendations of when to use which kind or combination of feedback (manual and/or automated), depending on the number of students and the amount of per-student resources available. While these observations are not novel, the provide educators with evidence-based justification for budget requests.",
+      "education_background": "Software development",
+      "expected_competencies": "Experience with qualitative methods, e.g., think-aloud interviews and programming languages and typical novice obstacles.",
+      "outcome": "An understanding of mental models in the context of computer science and programming learning.",
+      "tags": [
+        "BSc thesis",
+        "Programming learning",
+        "Self-efficacy",
+        "Automatic assessment",
+        "published"
+      ],
+      "completed": true
+    }
+  ]
 }

@@ -7,19 +7,37 @@ import tinycolor from "tinycolor2";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { MultiSelect} from "react-multi-select-component"
 
+const param = new URLSearchParams(document.location.search).get("inline");
+console.log(param);
+const isInline = param !== null || param === "true";
+
 const projects = data.projects.map((p) => {
   p.responsibles = p.responsibles.map((r) =>
     data.people.find((p) => p.email === r)
   );
-  p.tags = p.tags.map((t) => data.tags.find((tag) => tag.name === t));
+  const tags = [];
+  for(const tag of p.tags){
+    try{
+      const actual_tag = data.tags.find(t => t.name === tag);
+    if(actual_tag.color.includes(".")) actual_tag.color = data.default_colors[parseInt(actual_tag.color.split(".")[1]) % data.default_colors.length]
+    tags.push(actual_tag)
+    } catch (e){
+      console.log(tag)
+    }
+    
+  }
+  p.tags = tags;
   return p;
 });
 
-const preformat = (str) => str?.toLowerCase().trim();
+console.log(projects[0])
+
+
+const preformat = (str) => str.toLowerCase().trim();
 
 const flstReduction = (f, lst, str) => {
   return lst
-    ? lst.reduce((acc, ele) => acc || f(ele).toLowerCase().includes(str), false)
+    ? lst.reduce((acc, ele) => acc || f(ele)?.toLowerCase().includes(str), false)
     : false;
 };
 
@@ -69,9 +87,12 @@ const Pill = ({ text, color }) => (
   </span>
 );
 
+const completeTag = data.tags.find(t => t.name === "completed");
+const CompletedTag = <Pill text={completeTag.name} color={completeTag.color}/>
+
 const Supervisor = ({ t }) => (
   <span>
-    {t.name} (
+    {"  "}{t.name} (
     <a
       href={`mailto:${t.email}`}
       style={{ textDecoration: "none", color: "gray" }}
@@ -90,7 +111,26 @@ function App() {
   const [enabledSearches, setEnabledSearches] = React.useState([
     ...dropdownOptions,
   ]);
-  const [shownProjects, setShownProjects] = React.useState([...projects]);
+
+  const sortProjects = (projects) => {
+    projects.sort((a, b) => {
+      if(a.completed){
+        if(b.completed){
+          return -1;
+        } else {
+          return 1;
+        }
+      }
+      if(b.completed){
+        return -1;
+      } else {
+        return 1
+      }
+    } )
+    return projects;
+  }
+
+  const [shownProjects, setShownProjects] = React.useState(sortProjects([...projects]));
   const [search, setSearch] = React.useState("");
 
   function openModal() {
@@ -107,7 +147,7 @@ function App() {
   }
 
   const handleSearch = () => {
-    setShownProjects([
+    setShownProjects(sortProjects([
       ...projects.filter((p) =>
         searchProject(
           enabledSearches.map((e) => e.value),
@@ -115,7 +155,7 @@ function App() {
           p
         )
       ),
-    ]);
+    ]));
   };
 
   const rowStyle = { width: "100%", cursor: "pointer" };
@@ -128,7 +168,6 @@ function App() {
           {row.title}
         </div>
       ),
-      sortable: true,
     },
     {
       name: <div style={{ fontWeight: 800 }}>supervisor(s)</div>,
@@ -140,20 +179,26 @@ function App() {
           ))}{" "}
         </div>
       ),
-      sortable: true,
     },
     {
       name: <div style={{ fontWeight: 800 }}>tags</div>,
       selector: (row) => (
         <div style={rowStyle} onClick={() => openWith(row)}>
+          {row.completed && CompletedTag}
           {row.tags.map((t) => (
             <Pill text={t.name} color={t.color} />
           ))}
         </div>
       ),
-      sortable: true,
     },
   ];
+
+const conditionalRowStyle = [{
+  when: row => row.completed == true,
+  style: row => ({
+    opacity: 0.6
+  })
+}]
 
   const displayBoxStyle = {
     color: "#929292",
@@ -174,19 +219,22 @@ function App() {
             left: "5%",
             right: "5%",
             bottom: "auto",
+            backgroundColor: project.completed ? "#FBFBFB" : "white"
           },
         }}
       >
         <div class="App">
-          <div style={{display: "flex", alignItems:"flex-end", justifyContent: "flex-end"}}> <button style={{cursor:"pointer",  backgroundColor: "white", border: "none", fontSize: 20, fontWeight: 500}} onClick={closeModal}>⨉</button></div>
+          <div style={{display: "flex", alignItems:"flex-end", justifyContent: "flex-end"}}> <button style={{cursor:"pointer",  backgroundColor: "inherit", border: "none", fontSize: 20, fontWeight: 500}} onClick={closeModal}>⨉</button></div>
           <h1>{project.title}</h1>
           <div style={{ fontSize: 14 }}>
+          {project.completed && (<div style={{marginBottom: 20}}><i>Note that this project is completed and is here to provide an example of previous projects.</i></div>)} 
+          {project.completed && CompletedTag}
             {project.tags.map((t) => (
               <Pill text={t.name} color={t.color} />
             ))}
           </div>
           <div style={{ marginTop: 20 }}>
-            Supervisor(s):{" "}
+            Supervisor{project.responsibles.length > 1 && "s"}:{" "}
             {project.responsibles.map((t) => (
               <Supervisor t={t} />
             ))}
@@ -195,19 +243,19 @@ function App() {
           <h3>Other information</h3>
           <div style={{ backgroundColor: "#FAFAFA", padding: 20 }}>
             <div>
-              Expected background:{" "}
+              {project.completed ? "The student(s) had the following" : "Expected"} {" "}background(s):{" "}
               <span style={displayBoxStyle}>
                 {project.education_background}
               </span>
             </div>
             <div>
-              Expected competencies:{" "}
+            {project.completed ? "The student(s) had the following" : "Expected"}{" "}competencies:{" "}
               <span style={displayBoxStyle}>
                 {project.expected_competencies}
               </span>
             </div>
             <div>
-              What you will learn:{" "}
+            {project.completed ? "The student(s) learned the following" : "What you will learn"}:{" "}
               <span style={displayBoxStyle}>{project.outcome}</span>
             </div>
           </div>
@@ -267,7 +315,8 @@ function App() {
           />
         </div>
       </div>
-      <DataTable columns={columns} data={shownProjects} pagination />
+      <DataTable columns={columns} data={shownProjects} conditionalRowStyles={conditionalRowStyle}  pagination />
+      {isInline && <div style={{textAlign: "center"}}>For full screen version, see <a href="https://sebastiannicolajsen.github.io/ccer-projects">here</a>.</div>}
     </div>
   );
 }
