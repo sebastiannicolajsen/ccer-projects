@@ -92,14 +92,15 @@ const CompletedTag = <Pill text={completeTag.name} color={completeTag.color}/>
 
 const Supervisor = ({ t }) => (
   <span>
-    {"  "}{t.name} (
-    <a
+    {"  "}{t.name} 
+    
+    {t.external ? <Pill text="external" color="#EAEAEA" /> : <>(<a
       href={`mailto:${t.email}`}
       style={{ textDecoration: "none", color: "gray" }}
     >
       {t.email}
     </a>
-    )
+    )</>}
   </span>
 );
 
@@ -316,7 +317,7 @@ const conditionalRowStyle = [{
         </div>
       </div>
       <DataTable columns={columns} data={shownProjects} conditionalRowStyles={conditionalRowStyle}  pagination />
-      {isInline && <div style={{textAlign: "center"}}>For full screen version, see <a href="https://sebastiannicolajsen.github.io/ccer-projects">here</a>.</div>}
+      {isInline && <div style={{textAlign: "center"}}>For full screen version, see <a href="https://sebastiannicolajsen.github.io/ccer-projects" target="_blank">here</a>.</div>}
     </div>
   );
 }
